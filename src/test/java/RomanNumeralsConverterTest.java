@@ -11,7 +11,7 @@ public class RomanNumeralsConverterTest {
     private final RomanNumeralsConverter converter = new RomanNumeralsConverter();
 
     @Test
-    public void romanNumeralSymbols() {
+    public void symbols() {
         assertThat(converter.convert(1), equalTo("I"));
         assertThat(converter.convert(4), equalTo("IV"));
         assertThat(converter.convert(5), equalTo("V"));
@@ -28,13 +28,13 @@ public class RomanNumeralsConverterTest {
     }
 
     @Test
-    public void romanNumberThatContainingSameSymbols() {
+    public void romanNumeralsThatContainingSameSymbols() {
         assertThat(converter.convert(2), equalTo("II"));
         assertThat(converter.convert(3), equalTo("III"));
     }
 
     @Test
-    public void romanNumberThatContainingDiffSymbols() {
+    public void romanNumeralsThatContainingDiffSymbols() {
         assertThat(converter.convert(6), equalTo("VI"));
         assertThat(converter.convert(7), equalTo("VII"));
     }
