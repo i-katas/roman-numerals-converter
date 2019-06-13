@@ -11,17 +11,13 @@ public class RomanConverterTest {
     private final RomanConverter converter = new RomanConverter();
 
     @Test
-    public void one() {
+    public void romanUnits() {
         assertThat(converter.convert(1), equalTo("I"));
     }
 
     @Test
-    public void two() {
+    public void romanNumberThatContainingSameUnits() {
         assertThat(converter.convert(2), equalTo("II"));
-    }
-
-    @Test
-    public void three() {
         assertThat(converter.convert(3), equalTo("III"));
     }
 }
