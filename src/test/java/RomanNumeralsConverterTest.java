@@ -28,13 +28,13 @@ public class RomanNumeralsConverterTest {
     }
 
     @Test
-    public void romanNumeralsThatContainingSameSymbols() {
+    public void romanNumeralsContainingSameSymbols() {
         assertThat(converter.convert(2), equalTo("II"));
         assertThat(converter.convert(3), equalTo("III"));
     }
 
     @Test
-    public void romanNumeralsThatContainingDiffSymbols() {
+    public void romanNumeralsContainingDiffSymbols() {
         assertThat(converter.convert(6), equalTo("VI"));
         assertThat(converter.convert(7), equalTo("VII"));
     }
