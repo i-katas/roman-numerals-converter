@@ -7,8 +7,11 @@ public class RomanNumeralsConverter {
         StringBuilder outcome = new StringBuilder();
         for (Symbol current : Symbol.values()) {
             while (n >= current.value) {
-                outcome.append(current.name());
-                n -= current.value;
+                int times = n / current.value;
+                for (int i = 0; i < times; i++) {
+                    outcome.append(current.name());
+                }
+                n -= current.value * times;
             }
         }
         return outcome.toString();
