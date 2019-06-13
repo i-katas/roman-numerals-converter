@@ -4,9 +4,9 @@
  */
 public class RomanConverter {
     public String convert(int n) {
-        if (n == 1) {
-            return "I";
+        if (n != 1) {
+            return "II";
         }
-        return "II";
+        return "I";
     }
 }
