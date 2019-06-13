@@ -15,6 +15,16 @@ public class RomanNumeralsConverterTest {
         assertThat(converter.convert(1), equalTo("I"));
         assertThat(converter.convert(4), equalTo("IV"));
         assertThat(converter.convert(5), equalTo("V"));
+        assertThat(converter.convert(9), equalTo("IX"));
+        assertThat(converter.convert(10), equalTo("X"));
+        assertThat(converter.convert(40), equalTo("XL"));
+        assertThat(converter.convert(50), equalTo("L"));
+        assertThat(converter.convert(90), equalTo("XC"));
+        assertThat(converter.convert(100), equalTo("C"));
+        assertThat(converter.convert(400), equalTo("CD"));
+        assertThat(converter.convert(500), equalTo("D"));
+        assertThat(converter.convert(900), equalTo("CM"));
+        assertThat(converter.convert(1000), equalTo("M"));
     }
 
     @Test
