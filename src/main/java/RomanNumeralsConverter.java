@@ -4,15 +4,11 @@
  */
 public class RomanNumeralsConverter {
     public String convert(int n) {
-        Symbol symbol = null;
-
         for (Symbol current : Symbol.values()) {
-            symbol = current;
-            if (n >= symbol.value) {
-                return symbol.name() + convert(n - symbol.value);
+            if (n >= current.value) {
+                return current.name() + convert(n - current.value);
             }
         }
-
         return "";
     }
 
