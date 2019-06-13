@@ -6,20 +6,13 @@ public class RomanNumeralsConverter {
     public String convert(int n) {
         Symbol symbol = null;
 
-        symbol = Symbol.V;
-        if (n >= symbol.value) {
-            return symbol.name() + convert(n - symbol.value);
+        for (Symbol current : Symbol.values()) {
+            symbol = current;
+            if (n >= symbol.value) {
+                return symbol.name() + convert(n - symbol.value);
+            }
         }
 
-        symbol = Symbol.IV;
-        if (n >= symbol.value) {
-            return symbol.name() + convert(n - symbol.value);
-        }
-
-        symbol = Symbol.I;
-        if (n >= symbol.value) {
-            return symbol.name() + convert(n - symbol.value);
-        }
         return "";
     }
 
