@@ -26,5 +26,6 @@ public class RomanNumeralsConverterTest {
     @Test
     public void romanNumberThatContainingDiffSymbols() {
         assertThat(converter.convert(6), equalTo("VI"));
+        assertThat(converter.convert(7), equalTo("VII"));
     }
 }
