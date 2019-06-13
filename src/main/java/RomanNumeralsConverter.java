@@ -8,7 +8,7 @@ public class RomanNumeralsConverter {
             return "V" + convert(n - 5);
         }
         if (n >= 4) {
-            return "IV";
+            return "IV" + convert(n - 4);
         }
         if (n >= 1) {
             return "I" + convert(n - 1);
