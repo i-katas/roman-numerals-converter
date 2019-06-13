@@ -22,4 +22,9 @@ public class RomanNumeralsConverterTest {
         assertThat(converter.convert(2), equalTo("II"));
         assertThat(converter.convert(3), equalTo("III"));
     }
+
+    @Test
+    public void romanNumberThatContainingDiffSymbols() {
+        assertThat(converter.convert(6), equalTo("VI"));
+    }
 }
