@@ -4,14 +4,21 @@
  */
 public class RomanNumeralsConverter {
     public String convert(int n) {
-        if (n >= Symbol.V.value) {
-            return Symbol.V.name() + convert(n - Symbol.V.value);
+        Symbol symbol = null;
+
+        symbol = Symbol.V;
+        if (n >= symbol.value) {
+            return symbol.name() + convert(n - symbol.value);
         }
-        if (n >= Symbol.IV.value) {
-            return Symbol.IV.name() + convert(n - Symbol.IV.value);
+
+        symbol = Symbol.IV;
+        if (n >= symbol.value) {
+            return symbol.name() + convert(n - symbol.value);
         }
-        if (n >= Symbol.I.value) {
-            return Symbol.I.name() + convert(n - Symbol.I.value);
+
+        symbol = Symbol.I;
+        if (n >= symbol.value) {
+            return symbol.name() + convert(n - symbol.value);
         }
         return "";
     }
