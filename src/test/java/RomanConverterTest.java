@@ -13,6 +13,7 @@ public class RomanConverterTest {
     @Test
     public void romanUnits() {
         assertThat(converter.convert(1), equalTo("I"));
+        assertThat(converter.convert(4), equalTo("IV"));
     }
 
     @Test
