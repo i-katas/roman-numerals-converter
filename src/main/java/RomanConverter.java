@@ -5,7 +5,7 @@
 public class RomanConverter {
     public String convert(int n) {
         if (n > 1) {
-            return "II";
+            return "I" + convert(n - 1);
         }
         return "I";
     }
