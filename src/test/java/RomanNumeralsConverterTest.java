@@ -38,4 +38,9 @@ public class RomanNumeralsConverterTest {
         assertThat(converter.convert(6), equalTo("VI"));
         assertThat(converter.convert(7), equalTo("VII"));
     }
+
+    @Test
+    public void none() {
+        assertThat(converter.convert(0), equalTo(""));
+    }
 }
