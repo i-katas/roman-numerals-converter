@@ -6,11 +6,8 @@ public class RomanNumeralsConverter {
     public String convert(int n) {
         StringBuilder outcome = new StringBuilder();
         for (Symbol current : Symbol.values()) {
-            int times = n / current.value;
-            for (int i = 0; i < times; i++) {
-                outcome.append(current.name());
-            }
-            n -= current.value * times;
+            outcome.append(current.computePresentation(n));
+            n -= current.amount(n);
         }
         return outcome.toString();
     }
@@ -22,6 +19,23 @@ public class RomanNumeralsConverter {
 
         Symbol(int value) {
             this.value = value;
+        }
+
+        private CharSequence computePresentation(int n) {
+            int cardinality = cardinality(n);
+            StringBuilder presentation = new StringBuilder(name().length() * cardinality);
+            for (int i = 0; i < cardinality; i++) {
+                presentation.append(name());
+            }
+            return presentation;
+        }
+
+        private int cardinality(int n) {
+            return n / value;
+        }
+
+        private int amount(int n) {
+            return value * cardinality(n);
         }
     }
 }
