@@ -5,7 +5,7 @@
 public class RomanNumeralsConverter {
     public String convert(int n) {
         if (n >= 5) {
-            return "V";
+            return "V" + convert(n - 5);
         }
         if (n >= 4) {
             return "IV";
