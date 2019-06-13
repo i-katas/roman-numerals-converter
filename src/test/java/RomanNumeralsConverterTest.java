@@ -14,6 +14,7 @@ public class RomanNumeralsConverterTest {
     public void romanNumeralSymbols() {
         assertThat(converter.convert(1), equalTo("I"));
         assertThat(converter.convert(4), equalTo("IV"));
+        assertThat(converter.convert(5), equalTo("V"));
     }
 
     @Test
