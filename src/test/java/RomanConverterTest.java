@@ -14,4 +14,9 @@ public class RomanConverterTest {
     public void one() {
         assertThat(converter.convert(1), equalTo("I"));
     }
+
+    @Test
+    public void two() {
+        assertThat(converter.convert(2), equalTo("II"));
+    }
 }
