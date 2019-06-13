@@ -4,6 +4,9 @@
  */
 public class RomanNumeralsConverter {
     public String convert(int n) {
+        if (n == 5) {
+            return "V";
+        }
         if (n == 4) {
             return "IV";
         }
