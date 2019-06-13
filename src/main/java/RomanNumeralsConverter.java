@@ -4,15 +4,25 @@
  */
 public class RomanNumeralsConverter {
     public String convert(int n) {
-        if (n >= 5) {
-            return "V" + convert(n - 5);
+        if (n >= Symbol.V.value) {
+            return Symbol.V.name() + convert(n - Symbol.V.value);
         }
-        if (n >= 4) {
-            return "IV" + convert(n - 4);
+        if (n >= Symbol.IV.value) {
+            return Symbol.IV.name() + convert(n - Symbol.IV.value);
         }
-        if (n >= 1) {
-            return "I" + convert(n - 1);
+        if (n >= Symbol.I.value) {
+            return Symbol.I.name() + convert(n - Symbol.I.value);
         }
         return "";
+    }
+
+    private enum Symbol {
+        V(5), IV(4), I(1);
+
+        private final int value;
+
+        Symbol(int value) {
+            this.value = value;
+        }
     }
 }
