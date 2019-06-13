@@ -2,7 +2,7 @@
  * @author xiaoliang
  * @since 2019-06-13
  */
-public class RomanConverter {
+public class RomanNumeralsConverter {
     public String convert(int n) {
         if (n == 4) {
             return "IV";
