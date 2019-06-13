@@ -4,12 +4,14 @@
  */
 public class RomanNumeralsConverter {
     public String convert(int n) {
+        StringBuilder outcome = new StringBuilder();
         for (Symbol current : Symbol.values()) {
-            if (n >= current.value) {
-                return current.name() + convert(n - current.value);
+            while (n >= current.value) {
+                outcome.append(current.name());
+                n -= current.value;
             }
         }
-        return "";
+        return outcome.toString();
     }
 
     private enum Symbol {
